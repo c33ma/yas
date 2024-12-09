@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">  
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        background-color: white;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 98%;
+        padding: 16px 20px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 32px;
+        font-weight: 700;
+        color: #333;
+      }
+
+      .logo img {
+        height: auto;
+        width: 70px; 
+      }
+
+      nav a {
+        font-size: 18px;
+        margin-left: 20px;
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: pink;
+      }
+    
+
+      .home-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px; 
+        padding: 100px 20px;
+        width: 100%;
+        text-align: left;
+      }
+
+      .overall-text {
+        flex: 1;
+        text-align: left;
+        padding-left: 100px;
+      }
+
+      .home-section img {
+        max-width: 400px;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .overall-text h1 {
+        font-size: 38px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .overall-text p {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .project-section, .certification-section {
+        width: 100%;
+        padding: 60px 20px;
+      }
+
+      .project-section {
+        background-color: #FFFFC5;
+        text-align: center;
+      }
+
+      .project-section h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .project-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 40px;
+        text-align: left;
+      }
+
+      .project-item img {
+        max-width: 400px;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .project-description {
+        text-align: center;
+      }
+
+      .project-item h3 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .project-item p {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .certification-section {
+        background-color: pink;
+        text-align: center;
+      }
+
+      .certification-section h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: black;
+        margin-bottom: 20px;
+      }
+
+      .certification-section table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
+
+      .certification-section th,
+      .certification-section td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      .certification-section th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      .certification-section td {
+        background-color: #fff;
+      }
+
+      .experience-section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: white;
+      }
+
+      .experience-section h3 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: black;
+      }
+
+      .experience-section p {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .resume-link {
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .resume-link:hover {
+        background-color: pink;
+      }
+
+      .link-style {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .link-style:hover {
+        color: pink;
+      }
+
+      @media (max-width: 768px) {
+        .home-section, 
+        .project-item {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .overall-text h1, .project-item h3 {
+          font-size: 28px;
+        }
+
+        .overall-text p, .project-item p {
+          font-size: 16px;
+        }
+
+        .certification-section table {
+          font-size: 14px;
+        }
+
+        .certification-section th, .certification-section td {
+          padding: 10px;
+        }
+      }
+      
+      .contactme  {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 30;
+        color: black;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="YK logo.png" alt="Yasmeen Logo">
+      </div>
+      <nav>
+        <a href="#home" class="">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+      </nav>
+    </header>
+
+    
+    <section id="home" class="home-section">
+      <div class="overall-text">
+        <h1>Hi, I'm Yasmeen Kamal</h1>
+        <p>
+          I am a Global Business and Digital Arts student at the University of Waterloo currently living in Canada. Originally from the Middle East, I’ve spent my life moving between countries, which has shaped my perspective and inspired my love for design. I really enjoy designing logos and rebranding, finding joy in transforming concepts into visuals that truly capture a brand’s identity. My work is rooted in connecting people. My goal is to merge aesthetics with functionality to create meaningful products.
+        </p>
+      </div>
+      <img src="Yasmeenpic1.png" alt="Yasmeen Kamal">
+    </section>
+
+    <section id="projects" class="project-section">
+      <h2>My Projects</h2>
+
+      <div class="project-item">
+        <img src="Untitled.png" alt="Minute Maid Redesign">
+        <div class="project-description">
+          <h3>Minute Maid Redesign</h3>
+          <p>
+            Reposition Minute Maid as the ultimate drink for young athletes and active children, bringing the brand closer to sports culture and school-time moments. The focus is on making Minute Maid the go-to refreshment that fits seamlessly into the routines of kids at school, on the court, and in between practice sessions. The new tagline, "A Minute is All You Need," captures the essence of the quick energy boost and hydration that young athletes crave during their busy, active lives.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <a href="https://youtu.be/8tPDFaVSfeI" target="_blank">
+          <img src="LAsweetspot.png" alt="Documentary Project">
+        </a>
+        <div class="project-description">
+          <h3>Documentary</h3>
+          <p>
+            Click the image to see a documentary I directed. Positioned as a student-friendly haven, the cafe offers deals and discounts that make it a budget-friendly choice for those balancing academic life with finances. But it’s not just affordability that makes it special; it’s the community spirit and atmosphere that makes it so inviting. We hope to share how a simple cafe has become a gathering place, a home away from home, and a space where stories are shared, friendships are made, and memories are created.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <img src="LOGO.png" alt="Logo Designs">
+        <div class="project-description">
+          <h3>Logo Design</h3>
+          <p>
+            I created a logo for a classmate by drawing inspiration from his personal interests. I used relevant symbols, colors, and shapes to reflect those elements in the design. The logo aimed to represent their passions and individuality.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="certification-section">
+      <h3>Certification</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Description</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IGCSE</td>
+            <td>A detailed project description goes here.</td>
+            <td><a href="IGCSE MARK grade 10.pdf" target="_blank" class="link-style">Click Here</a></td>
+          </tr>
+          <tr>
+            <td>Recommendation Letter</td>
+            <td>Recommendation from previous Teachers.</td>
+            <td><a href="Yasmeen's Recommendation Letter.pdf" target="_blank" class="link-style">Click Here</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <h3>Experience</h3>
+      <a href="CV.pdf" class="resume-link" target="_blank">View my Resume</a>
+    </section>
+    
+    <section class="contactme"> <a href="mailto:ynkamal@uwaterloo.ca" class="link-style" >Contact Me</a> </section>
+    
+
+  </body>
+</html>
